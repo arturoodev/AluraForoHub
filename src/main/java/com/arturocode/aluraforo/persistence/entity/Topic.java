@@ -1,12 +1,17 @@
 package com.arturocode.aluraforo.persistence.entity;
 
+import com.arturocode.aluraforo.dto.DataRegisterTopic;
+import com.arturocode.aluraforo.util.Status;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Date;
+import java.util.List;
 
 @Getter
 @Setter
@@ -24,9 +29,10 @@ public class Topic {
 
     @Temporal(TemporalType.TIMESTAMP)
     @Column(name = "creation_date")
-    private Date creationDate;
+    private LocalDateTime creationDate;
 
-    private Integer status;
+    @Enumerated(EnumType.STRING)
+    private Status status;
 
     @ManyToOne
     @JoinColumn(name = "user_id")
@@ -36,4 +42,20 @@ public class Topic {
     @JoinColumn(name = "course_id")
     private Course course;
 
+    @OneToMany(mappedBy = "topic", cascade = CascadeType.ALL, fetch = FetchType.EAGER, orphanRemoval = true)
+    private List<Response> responses;
+
+
+    public  Topic(DataRegisterTopic dataRegisterTopic){
+        this.title = dataRegisterTopic.title();
+        this.message = dataRegisterTopic.message();
+
+        LocalDateTime now = LocalDateTime.now();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
+        String formattedDateTime = now.format(formatter);
+        this.creationDate = LocalDateTime.parse(formattedDateTime, formatter);
+        this.status = Status.OPEN;
+
+
+    }
 }

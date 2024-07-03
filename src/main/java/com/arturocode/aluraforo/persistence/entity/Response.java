@@ -1,10 +1,7 @@
 package com.arturocode.aluraforo.persistence.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 import org.hibernate.annotations.Fetch;
 import org.hibernate.annotations.FetchMode;
 
@@ -14,6 +11,7 @@ import java.util.Date;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@EqualsAndHashCode(of = "id")
 @Entity
 @Table(name = "response")
 public class Response {
@@ -29,8 +27,8 @@ public class Response {
 
     private String solution;
 
-    @Fetch(FetchMode.JOIN)
-    @ManyToOne()
+
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "topic_id")
     private Topic topic;
 
