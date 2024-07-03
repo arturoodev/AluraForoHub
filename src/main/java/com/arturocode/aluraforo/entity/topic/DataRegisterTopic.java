@@ -1,4 +1,4 @@
-package com.arturocode.aluraforo.dto;
+package com.arturocode.aluraforo.entity.topic;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;

@@ -1,5 +1,6 @@
-package com.arturocode.aluraforo.persistence.entity;
+package com.arturocode.aluraforo.entity.user;
 
+import com.arturocode.aluraforo.entity.profile.Profile;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;

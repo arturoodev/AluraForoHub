@@ -1,9 +1,9 @@
-package com.arturocode.aluraforo.persistence.entity;
+package com.arturocode.aluraforo.entity.response;
 
+import com.arturocode.aluraforo.entity.user.User;
+import com.arturocode.aluraforo.entity.topic.Topic;
 import jakarta.persistence.*;
 import lombok.*;
-import org.hibernate.annotations.Fetch;
-import org.hibernate.annotations.FetchMode;
 
 import java.util.Date;
 
@@ -17,7 +17,7 @@ import java.util.Date;
 public class Response {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Long id;
 
     private String message;
 

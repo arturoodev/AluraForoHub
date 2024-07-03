@@ -1,4 +1,4 @@
-package com.arturocode.aluraforo.persistence.entity;
+package com.arturocode.aluraforo.entity.course;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -11,12 +11,13 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "profile")
-public class Profile {
+@Table(name = "course")
+public class Course {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     private String name;
+    private String category;
 
 }

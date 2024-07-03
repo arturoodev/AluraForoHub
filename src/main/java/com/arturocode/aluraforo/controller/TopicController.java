@@ -1,35 +1,38 @@
 package com.arturocode.aluraforo.controller;
 
-import com.arturocode.aluraforo.persistence.entity.Topic;
-import com.arturocode.aluraforo.persistence.repository.TopicRepository;
+import com.arturocode.aluraforo.entity.topic.DataListTopicWithResponse;
+import com.arturocode.aluraforo.repository.TopicRepository;
+import com.arturocode.aluraforo.service.TopicService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.Optional;
+
 
 
 @RestController
 @RequestMapping("/api/topics")
 public class TopicController {
 
-    private final TopicRepository topicRepository;
+    @Autowired
+    private TopicRepository topicRepository;
 
-    public TopicController(TopicRepository topicRepository) {
-        this.topicRepository = topicRepository;
+    @Autowired
+    private TopicService topicService;
+
+    @GetMapping({"", "/"})
+    public ResponseEntity<Page> getAllTopics(@PageableDefault() Pageable pagination) {
+        return topicService.listAllTopics(pagination);
     }
 
     @GetMapping("/{id}")
-    public Optional<Topic> getTopicById(@PathVariable Integer id) {
-        return topicRepository.findById(id);
-    }
-
-    @GetMapping({"", "/"})
-    public Page<Topic> getAllTopics(@PageableDefault Pageable pagination) {
-        return topicRepository.findAll(pagination);
+    public ResponseEntity<DataListTopicWithResponse> getTopicById(@PathVariable Long id){
+        return topicService.listOneTopic(id);
     }
 }

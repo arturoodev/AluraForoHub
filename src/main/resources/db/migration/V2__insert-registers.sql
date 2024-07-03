@@ -35,16 +35,16 @@ INSERT INTO `foroalura`.`course` (`name`, `category`) VALUES ('Java Network Prog
 INSERT INTO `foroalura`.`course` (`name`, `category`) VALUES ('Java Microservices', 'Microservices');
 
 -- Inserts for `topic` table
-INSERT INTO `foroalura`.`topic` (`title`, `message`, `creation_date`, `status`, `user_id`, `course_id`) VALUES ('Java Lambda Expressions', 'Exploring the power of lambda expressions in Java', NOW(), 1, 1, 1);
-INSERT INTO `foroalura`.`topic` (`title`, `message`, `creation_date`, `status`, `user_id`, `course_id`) VALUES ('JavaFX Basics', 'Introduction to JavaFX for building desktop applications', NOW(), 1, 2, 1);
-INSERT INTO `foroalura`.`topic` (`title`, `message`, `creation_date`, `status`, `user_id`, `course_id`) VALUES ('Servlets and JSP', 'Understanding Servlets and JavaServer Pages for web development', NOW(), 1, 3, 3);
-INSERT INTO `foroalura`.`topic` (`title`, `message`, `creation_date`, `status`, `user_id`, `course_id`) VALUES ('Microservices Architecture', 'Designing scalable microservices architecture using Java', NOW(), 1, 4, 10);
-INSERT INTO `foroalura`.`topic` (`title`, `message`, `creation_date`, `status`, `user_id`, `course_id`) VALUES ('Spring Security Configuration', 'Securing Spring applications with Spring Security', NOW(), 1, 5, 5);
-INSERT INTO `foroalura`.`topic` (`title`, `message`, `creation_date`, `status`, `user_id`, `course_id`) VALUES ('Java Data Structures Overview', 'Introduction to data structures like lists, queues, and trees in Java', NOW(), 1, 6, 7);
-INSERT INTO `foroalura`.`topic` (`title`, `message`, `creation_date`, `status`, `user_id`, `course_id`) VALUES ('Java GUI Design Patterns', 'Exploring common design patterns for building Java GUI applications', NOW(), 1, 7, 8);
-INSERT INTO `foroalura`.`topic` (`title`, `message`, `creation_date`, `status`, `user_id`, `course_id`) VALUES ('Java Networking Basics', 'Fundamentals of networking programming in Java', NOW(), 1, 8, 9);
-INSERT INTO `foroalura`.`topic` (`title`, `message`, `creation_date`, `status`, `user_id`, `course_id`) VALUES ('Spring Boot Microservices', 'Developing microservices with Spring Boot for Java', NOW(), 1, 9, 10);
-INSERT INTO `foroalura`.`topic` (`title`, `message`, `creation_date`, `status`, `user_id`, `course_id`) VALUES ('Java Concurrency', 'Understanding concurrency concepts and programming in Java', NOW(), 1, 10, 1);
+INSERT INTO `foroalura`.`topic` (`title`, `message`, `creation_date`, `status`, `user_id`, `course_id`) VALUES ('Java Lambda Expressions', 'Exploring the power of lambda expressions in Java', NOW(), "OPEN", 1, 1);
+INSERT INTO `foroalura`.`topic` (`title`, `message`, `creation_date`, `status`, `user_id`, `course_id`) VALUES ('JavaFX Basics', 'Introduction to JavaFX for building desktop applications', NOW(), "OPEN", 2, 1);
+INSERT INTO `foroalura`.`topic` (`title`, `message`, `creation_date`, `status`, `user_id`, `course_id`) VALUES ('Servlets and JSP', 'Understanding Servlets and JavaServer Pages for web development', NOW(), "OPEN", 3, 3);
+INSERT INTO `foroalura`.`topic` (`title`, `message`, `creation_date`, `status`, `user_id`, `course_id`) VALUES ('Microservices Architecture', 'Designing scalable microservices architecture using Java', NOW(), "OPEN", 4, 10);
+INSERT INTO `foroalura`.`topic` (`title`, `message`, `creation_date`, `status`, `user_id`, `course_id`) VALUES ('Spring Security Configuration', 'Securing Spring applications with Spring Security', NOW(), "OPEN", 5, 5);
+INSERT INTO `foroalura`.`topic` (`title`, `message`, `creation_date`, `status`, `user_id`, `course_id`) VALUES ('Java Data Structures Overview', 'Introduction to data structures like lists, queues, and trees in Java', NOW(), "OPEN", 6, 7);
+INSERT INTO `foroalura`.`topic` (`title`, `message`, `creation_date`, `status`, `user_id`, `course_id`) VALUES ('Java GUI Design Patterns', 'Exploring common design patterns for building Java GUI applications', NOW(), "OPEN", 7, 8);
+INSERT INTO `foroalura`.`topic` (`title`, `message`, `creation_date`, `status`, `user_id`, `course_id`) VALUES ('Java Networking Basics', 'Fundamentals of networking programming in Java', NOW(), "OPEN", 8, 9);
+INSERT INTO `foroalura`.`topic` (`title`, `message`, `creation_date`, `status`, `user_id`, `course_id`) VALUES ('Spring Boot Microservices', 'Developing microservices with Spring Boot for Java', NOW(), "OPEN", 9, 10);
+INSERT INTO `foroalura`.`topic` (`title`, `message`, `creation_date`, `status`, `user_id`, `course_id`) VALUES ('Java Concurrency', 'Understanding concurrency concepts and programming in Java', NOW(), "OPEN", 10, 1);
 
 -- Inserts for `response` table
 INSERT INTO `foroalura`.`response` (`message`, `creation_date`, `solution`, `topic_id`, `user_id`) VALUES ('Lambda expressions can simplify code by providing concise syntax', NOW(), 'Use lambda expressions for functional programming paradigms', 1, 2);

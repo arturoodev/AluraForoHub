@@ -54,7 +54,7 @@ CREATE TABLE IF NOT EXISTS `foroalura`.`topic` (
   `title` VARCHAR(255) NULL,
   `message` VARCHAR(255) NULL,
   `creation_date` DATETIME NULL,
-  `status` TINYINT NULL,
+  `status` VARCHAR(30) NULL,
   `user_id` INT NOT NULL,
   `course_id` INT NOT NULL,
   PRIMARY KEY (`id`),

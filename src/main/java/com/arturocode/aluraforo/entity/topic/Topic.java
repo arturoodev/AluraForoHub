@@ -1,6 +1,8 @@
-package com.arturocode.aluraforo.persistence.entity;
+package com.arturocode.aluraforo.entity.topic;
 
-import com.arturocode.aluraforo.dto.DataRegisterTopic;
+import com.arturocode.aluraforo.entity.course.Course;
+import com.arturocode.aluraforo.entity.response.Response;
+import com.arturocode.aluraforo.entity.user.User;
 import com.arturocode.aluraforo.util.Status;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -10,7 +12,6 @@ import lombok.Setter;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.Date;
 import java.util.List;
 
 @Getter
@@ -22,7 +23,7 @@ import java.util.List;
 public class Topic {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Long id;
 
     private String title;
     private String message;
@@ -53,6 +54,7 @@ public class Topic {
         LocalDateTime now = LocalDateTime.now();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");
         String formattedDateTime = now.format(formatter);
+
         this.creationDate = LocalDateTime.parse(formattedDateTime, formatter);
         this.status = Status.OPEN;
 
