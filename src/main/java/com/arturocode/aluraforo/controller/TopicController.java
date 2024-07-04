@@ -1,27 +1,25 @@
 package com.arturocode.aluraforo.controller;
 
 import com.arturocode.aluraforo.entity.topic.DataListTopicWithResponse;
+import com.arturocode.aluraforo.entity.topic.DataRegisterTopic;
+import com.arturocode.aluraforo.entity.topic.DataResponseTopic;
 import com.arturocode.aluraforo.repository.TopicRepository;
 import com.arturocode.aluraforo.service.TopicService;
+import jakarta.transaction.Transactional;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-
-
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.util.UriComponentsBuilder;
 
 
 @RestController
 @RequestMapping("/api/topics")
 public class TopicController {
 
-    @Autowired
-    private TopicRepository topicRepository;
 
     @Autowired
     private TopicService topicService;
@@ -34,5 +32,11 @@ public class TopicController {
     @GetMapping("/{id}")
     public ResponseEntity<DataListTopicWithResponse> getTopicById(@PathVariable Long id){
         return topicService.listOneTopic(id);
+    }
+
+    @PostMapping
+    @Transactional
+    public ResponseEntity<DataResponseTopic> saveTopic(@RequestBody @Valid DataRegisterTopic dataRegisterTopic, UriComponentsBuilder uriComponentsBuilder){
+        return topicService.save(dataRegisterTopic, uriComponentsBuilder);
     }
 }
