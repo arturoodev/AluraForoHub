@@ -3,6 +3,7 @@ package com.arturocode.aluraforo.controller;
 import com.arturocode.aluraforo.entity.topic.DataListTopicWithResponse;
 import com.arturocode.aluraforo.entity.topic.DataRegisterTopic;
 import com.arturocode.aluraforo.entity.topic.DataResponseTopic;
+import com.arturocode.aluraforo.entity.topic.DataUpdateTopic;
 import com.arturocode.aluraforo.repository.TopicRepository;
 import com.arturocode.aluraforo.service.TopicService;
 import jakarta.transaction.Transactional;
@@ -30,13 +31,24 @@ public class TopicController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<DataListTopicWithResponse> getTopicById(@PathVariable Long id){
+    public ResponseEntity<DataListTopicWithResponse> getTopicById(@PathVariable Long id) {
         return topicService.listOneTopic(id);
     }
 
     @PostMapping
     @Transactional
-    public ResponseEntity<DataResponseTopic> saveTopic(@RequestBody @Valid DataRegisterTopic dataRegisterTopic, UriComponentsBuilder uriComponentsBuilder){
+    public ResponseEntity<DataResponseTopic> saveTopic(@RequestBody @Valid DataRegisterTopic dataRegisterTopic, UriComponentsBuilder uriComponentsBuilder) {
         return topicService.save(dataRegisterTopic, uriComponentsBuilder);
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<DataResponseTopic> updateTopic(@RequestBody @Valid DataUpdateTopic dataUpdateTopic, @PathVariable Long id, UriComponentsBuilder uriComponentsBuilder) {
+        return topicService.updateTopic(dataUpdateTopic, id, uriComponentsBuilder);
+    }
+
+    @DeleteMapping("/{id}")
+    @Transactional
+    public ResponseEntity deleteTopic(@PathVariable Long id) {
+        return topicService.deleteTopic(id);
     }
 }

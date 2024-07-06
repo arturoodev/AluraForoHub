@@ -47,7 +47,7 @@ public class Topic {
     private List<Response> responses;
 
 
-    public  Topic(DataRegisterTopic dataRegisterTopic){
+    public Topic(DataRegisterTopic dataRegisterTopic) {
         this.title = dataRegisterTopic.title();
         this.message = dataRegisterTopic.message();
 
@@ -57,7 +57,26 @@ public class Topic {
 
         this.creationDate = LocalDateTime.parse(formattedDateTime, formatter);
         this.status = Status.OPEN;
+    }
 
+    public void updateTopic(DataUpdateTopic dataUpdateTopic, Course course, User user) {
+        if (dataUpdateTopic.title() != null) {
+            this.title = dataUpdateTopic.title();
+        }
 
+        if (dataUpdateTopic.message() != null) {
+            this.message = dataUpdateTopic.message();
+        }
+        if (dataUpdateTopic.status() != null) {
+            this.status = Status.fromString(dataUpdateTopic.status());
+        }
+
+        if (user != null) {
+            this.user = user;
+        }
+
+        if (course != null) {
+            this.course = course;
+        }
     }
 }
