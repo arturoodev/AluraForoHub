@@ -19,7 +19,7 @@ CREATE TABLE IF NOT EXISTS `foroalura`.`user` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(255) NULL,
   `username` VARCHAR(255) NULL,
-  `password` VARCHAR(16) NULL,
+  `password` VARCHAR(255) NULL,
   `profile_id` INT NOT NULL,
   PRIMARY KEY (`id`),
   INDEX `fk_user_profile1_idx` (`profile_id` ASC) VISIBLE,

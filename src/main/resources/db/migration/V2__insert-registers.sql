@@ -6,21 +6,21 @@ INSERT INTO `foroalura`.`profile` (`name`) VALUES ('Java Architect');
 INSERT INTO `foroalura`.`profile` (`name`) VALUES ('Java Analyst');
 
 -- Inserts for `user` table
-INSERT INTO `foroalura`.`user` (`name`, `username`, `password`, `profile_id`) VALUES ('Sarah Adams', 'sarahadams', 'java456', 1);
-INSERT INTO `foroalura`.`user` (`name`, `username`, `password`, `profile_id`) VALUES ('Daniel Brown', 'dbrown', 'javaDev456', 2);
-INSERT INTO `foroalura`.`user` (`name`, `username`, `password`, `profile_id`) VALUES ('Lily Clark', 'lilyc', 'codingJava', 3);
-INSERT INTO `foroalura`.`user` (`name`, `username`, `password`, `profile_id`) VALUES ('William Lee', 'williaml', 'javaMaster', 4);
-INSERT INTO `foroalura`.`user` (`name`, `username`, `password`, `profile_id`) VALUES ('Sophie Turner', 'sturner', 'javaWizard', 5);
-INSERT INTO `foroalura`.`user` (`name`, `username`, `password`, `profile_id`) VALUES ('Ethan White', 'ethanw', 'java456', 1);
-INSERT INTO `foroalura`.`user` (`name`, `username`, `password`, `profile_id`) VALUES ('Isabella Young', 'izzy', 'javaJava', 2);
-INSERT INTO `foroalura`.`user` (`name`, `username`, `password`, `profile_id`) VALUES ('Ryan King', 'ryanking', '123java', 3);
-INSERT INTO `foroalura`.`user` (`name`, `username`, `password`, `profile_id`) VALUES ('Grace Rodriguez', 'grace.r', 'secureJava123', 4);
-INSERT INTO `foroalura`.`user` (`name`, `username`, `password`, `profile_id`) VALUES ('David Garcia', 'david.g', 'javaPass456', 5);
-INSERT INTO `foroalura`.`user` (`name`, `username`, `password`, `profile_id`) VALUES ('Oliver Martinez', 'oliver.m', 'javaRules456', 1);
-INSERT INTO `foroalura`.`user` (`name`, `username`, `password`, `profile_id`) VALUES ('Mia Hernandez', 'mia.h', 'javaExpert123', 2);
-INSERT INTO `foroalura`.`user` (`name`, `username`, `password`, `profile_id`) VALUES ('Nathan Walker', 'nwalker', 'javaLover', 3);
-INSERT INTO `foroalura`.`user` (`name`, `username`, `password`, `profile_id`) VALUES ('Ava Lewis', 'ava.l', 'codingJava456', 4);
-INSERT INTO `foroalura`.`user` (`name`, `username`, `password`, `profile_id`) VALUES ('Alexander Wright', 'awright', 'java123', 5);
+INSERT INTO `foroalura`.`user` (`name`, `username`, `password`, `profile_id`) VALUES ('Sarah Adams', 'sarahadams', '$2a$04$QtaLxNmz1.lNoH8W5rqYQe7uT3La8L0dfkTq14HX/xmZs6fxTat7S', 1);
+INSERT INTO `foroalura`.`user` (`name`, `username`, `password`, `profile_id`) VALUES ('Daniel Brown', 'dbrown', '$2a$04$QtaLxNmz1.lNoH8W5rqYQe7uT3La8L0dfkTq14HX/xmZs6fxTat7S', 2);
+INSERT INTO `foroalura`.`user` (`name`, `username`, `password`, `profile_id`) VALUES ('Lily Clark', 'lilyc', '$2a$04$QtaLxNmz1.lNoH8W5rqYQe7uT3La8L0dfkTq14HX/xmZs6fxTat7S', 3);
+INSERT INTO `foroalura`.`user` (`name`, `username`, `password`, `profile_id`) VALUES ('William Lee', 'williaml', '$2a$04$QtaLxNmz1.lNoH8W5rqYQe7uT3La8L0dfkTq14HX/xmZs6fxTat7S', 4);
+INSERT INTO `foroalura`.`user` (`name`, `username`, `password`, `profile_id`) VALUES ('Sophie Turner', 'sturner', '$2a$04$QtaLxNmz1.lNoH8W5rqYQe7uT3La8L0dfkTq14HX/xmZs6fxTat7S', 5);
+INSERT INTO `foroalura`.`user` (`name`, `username`, `password`, `profile_id`) VALUES ('Ethan White', 'ethanw', '$2a$04$QtaLxNmz1.lNoH8W5rqYQe7uT3La8L0dfkTq14HX/xmZs6fxTat7S', 1);
+INSERT INTO `foroalura`.`user` (`name`, `username`, `password`, `profile_id`) VALUES ('Isabella Young', 'izzy', '$2a$04$QtaLxNmz1.lNoH8W5rqYQe7uT3La8L0dfkTq14HX/xmZs6fxTat7S', 2);
+INSERT INTO `foroalura`.`user` (`name`, `username`, `password`, `profile_id`) VALUES ('Ryan King', 'ryanking', '$2a$04$QtaLxNmz1.lNoH8W5rqYQe7uT3La8L0dfkTq14HX/xmZs6fxTat7S', 3);
+INSERT INTO `foroalura`.`user` (`name`, `username`, `password`, `profile_id`) VALUES ('Grace Rodriguez', 'grace.r', '$2a$04$QtaLxNmz1.lNoH8W5rqYQe7uT3La8L0dfkTq14HX/xmZs6fxTat7S', 4);
+INSERT INTO `foroalura`.`user` (`name`, `username`, `password`, `profile_id`) VALUES ('David Garcia', 'david.g', '$2a$04$QtaLxNmz1.lNoH8W5rqYQe7uT3La8L0dfkTq14HX/xmZs6fxTat7S', 5);
+INSERT INTO `foroalura`.`user` (`name`, `username`, `password`, `profile_id`) VALUES ('Oliver Martinez', 'oliver.m', '$2a$04$QtaLxNmz1.lNoH8W5rqYQe7uT3La8L0dfkTq14HX/xmZs6fxTat7S', 1);
+INSERT INTO `foroalura`.`user` (`name`, `username`, `password`, `profile_id`) VALUES ('Mia Hernandez', 'mia.h', '$2a$04$QtaLxNmz1.lNoH8W5rqYQe7uT3La8L0dfkTq14HX/xmZs6fxTat7S', 2);
+INSERT INTO `foroalura`.`user` (`name`, `username`, `password`, `profile_id`) VALUES ('Nathan Walker', 'nwalker', '$2a$04$QtaLxNmz1.lNoH8W5rqYQe7uT3La8L0dfkTq14HX/xmZs6fxTat7S', 3);
+INSERT INTO `foroalura`.`user` (`name`, `username`, `password`, `profile_id`) VALUES ('Ava Lewis', 'ava.l', '$2a$04$QtaLxNmz1.lNoH8W5rqYQe7uT3La8L0dfkTq14HX/xmZs6fxTat7S', 4);
+INSERT INTO `foroalura`.`user` (`name`, `username`, `password`, `profile_id`) VALUES ('Alexander Wright', 'awright', '$2a$04$QtaLxNmz1.lNoH8W5rqYQe7uT3La8L0dfkTq14HX/xmZs6fxTat7S', 5);
 
 -- Inserts for `course` table
 INSERT INTO `foroalura`.`course` (`name`, `category`) VALUES ('Java Programming Basics', 'Programming');

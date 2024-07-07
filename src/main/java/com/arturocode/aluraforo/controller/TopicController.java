@@ -4,7 +4,6 @@ import com.arturocode.aluraforo.entity.topic.DataListTopicWithResponse;
 import com.arturocode.aluraforo.entity.topic.DataRegisterTopic;
 import com.arturocode.aluraforo.entity.topic.DataResponseTopic;
 import com.arturocode.aluraforo.entity.topic.DataUpdateTopic;
-import com.arturocode.aluraforo.repository.TopicRepository;
 import com.arturocode.aluraforo.service.TopicService;
 import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
